@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoVault - Digital Innovation Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .gradient-bg { background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%); }
+        .card-gradient { background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%); }
+        .text-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .animate-fade-in { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+        .animate-slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; transform: translateY(30px); }
+        .animate-scale { animation: scaleIn 0.5s ease-out forwards; opacity: 0; transform: scale(0.9); }
+        
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+        @keyframes scaleIn { to { opacity: 1; transform: scale(1); } }
+        
+        .hover-glow:hover { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); transition: all 0.3s ease; }
+        .backdrop-blur { backdrop-filter: blur(10px); }
+        
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 backdrop-blur bg-gray-900/80 border-b border-gray-800">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gradient">NeoVault</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-400 transition-colors">Home</a>
+                <a href="#features" class="hover:text-blue-400 transition-colors">Features</a>
+                <a href="#services" class="hover:text-blue-400 transition-colors">Services</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+            <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">Get Started</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="home" class="min-h-screen gradient-bg flex items-center justify-center px-4 pt-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+                    Digital Innovation <span class="text-gradient">Redefined</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-slide-up delay-100">
+                    Transform your business with cutting-edge technology solutions designed for the modern world
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-200">
+                    <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-all hover-glow">
+                        Start Free Trial
+                    </button>
+                    <button class="border border-gray-600 hover:border-blue-500 px-8 py-3 rounded-lg font-semibold transition-colors">
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-20 bg-gray-900">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Why Choose NeoVault</h2>
+                    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                        Built for performance, designed for scale, optimized for results
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="card-gradient border border-gray-800 rounded-xl p-8 hover-glow animate-scale">
+                        <div class="w-12 h-12 bg-blue-600 rounded-lg mb-6 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Lightning Fast</h3>
+                        <p class="text-gray-400">Optimized performance with 99.9% uptime guarantee and sub-second response times.</p>
+                    </div>
+                    
+                    <div class="card-gradient border border-gray-800 rounded-xl p-8 hover-glow animate-scale delay-100">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg mb-6 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Enterprise Security</h3>
+                        <p class="text-gray-400">Bank-level encryption and compliance with SOC 2, GDPR, and HIPAA standards.</p>
+                    </div>
+                    
+                    <div class="card-gradient border border-gray-800 rounded-xl p-8 hover-glow animate-scale delay-200">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg mb-6 flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Smart Analytics</h3>
+                        <p class="text-gray-400">Real-time insights and AI-powered analytics to drive data-informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 gradient-bg">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient">Our Services</h2>
+                    <p class="text-xl text-gray-400">Complete digital transformation solutions</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="card-gradient border border-gray-800 rounded-lg p-6 text-center hover-glow">
+                        <div class="text-3xl mb-4">☁️</div>
+                        <h3 class="text-lg font-bold mb-2">Cloud Solutions</h3>
+                        <p class="text-gray-400 text-sm">Scalable infrastructure</p>
+                    </div>
+                    <div class="card-gradient border border-gray-800 rounded-lg p-6 text-center hover-glow">
+                        <div class="text-3xl mb-4">🤖</div>
+                        <h3 class="text-lg font-bold mb-2">AI Integration</h3>
+                        <p class="text-gray-400 text-sm">Smart automation</p>
+                    </div>
+                    <div class="card-gradient border border-gray-800 rounded-lg p-6 text-center hover-glow">
+                        <div class="text-3xl mb-4">📱</div>
+                        <h3 class="text-lg font-bold mb-2">Mobile Apps</h3>
+                        <p class="text-gray-400 text-sm">Cross-platform development</p>
+                    </div>
+                    <div class="card-gradient border border-gray-800 rounded-lg p-6 text-center hover-glow">
+                        <div class="text-3xl mb-4">🔒</div>
+                        <h3 class="text-lg font-bold mb-2">Security</h3>
+                        <p class="text-gray-400 text-sm">Advanced protection</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="py-16 bg-gray-900">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-3xl font-bold text-blue-400 mb-2">1000+</div>
+                        <div class="text-gray-400">Projects</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-purple-400 mb-2">500+</div>
+                        <div class="text-gray-400">Clients</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-green-400 mb-2">50+</div>
+                        <div class="text-gray-400">Team</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold text-yellow-400 mb-2">99.9%</div>
+                        <div class="text-gray-400">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 gradient-bg">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-4 text-gradient">Ready to Get Started?</h2>
+                <p class="text-xl text-gray-400 mb-8">Join thousands of companies already using NeoVault</p>
+                
+                <div class="card-gradient border border-gray-800 rounded-xl p-8">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            class="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                        >
+                        <button class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-semibold transition-colors">
+                            Get Started
+                        </button>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4">Free 14-day trial. No credit card required.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-gradient mb-4">NeoVault</div>
+                    <p class="text-gray-400">Building the future of digital innovation</p>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-4">Support</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Status</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 NeoVault. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-fade-in, .animate-slide-up, .animate-scale').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
